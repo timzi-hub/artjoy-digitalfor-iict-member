@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect, useCallback } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
@@ -28,7 +27,6 @@ const App: React.FC = () => {
     if (isDark) {
       document.documentElement.classList.add('dark');
     } else {
-      document.documentElement.classList.remove('class');
       document.documentElement.classList.remove('dark');
     }
   }, [isDark]);
@@ -89,8 +87,6 @@ const App: React.FC = () => {
       });
       // @ts-ignore
       window.Cal.ns["15min"]("open", { calLink: "artjoy/15min" });
-    } else {
-      alert("Opening our booking studio...");
     }
   };
 
@@ -141,7 +137,7 @@ const App: React.FC = () => {
                   <div className="absolute -top-20 -right-20 w-80 h-80 bg-gradient-to-br from-blue-500/20 to-transparent rounded-full blur-3xl"></div>
                   <div className="absolute -bottom-20 -left-20 w-80 h-80 bg-gradient-to-tr from-pink-500/20 to-transparent rounded-full blur-3xl"></div>
                   <p className="text-3xl md:text-5xl font-bold italic mb-12 leading-tight">
-                    "ArtJoy has completely redefined how we think about office aesthetics. The quality is unmatched."
+                    "ArtJoy changed how we think about our space. The pieces feel personal and the service is fantastic."
                   </p>
                   <div className="flex flex-col items-center gap-4">
                      <div className="w-16 h-16 rounded-full border-2 border-white/20 overflow-hidden shadow-lg">
@@ -168,7 +164,6 @@ const App: React.FC = () => {
       <Footer onOpenModal={openModal} onBookCall={openBooking} />
       <StudioAssistant />
       
-      {/* Floating CTA Badge */}
       {!user && (
         <div className="fixed bottom-8 right-8 z-[100] hidden sm:block">
           <button 
